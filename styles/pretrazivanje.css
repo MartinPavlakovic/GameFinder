@@ -1,0 +1,265 @@
+:root {
+  --main-color: #993d69;
+  --white: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 30px;
+  color: var(--white);
+  background-color: var(--main-color);
+  border-radius: 1rem;
+  margin-top: 1rem;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn:active {
+  opacity: 0.6;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--white);
+  width: 100%;
+  height: 75px;
+  position: fixed;
+  padding: 0 30px;
+  background-color: var(--main-color);
+}
+
+.navbar a {
+  color: var(--white);
+  padding: 10px 20px;
+}
+
+.navbar a:hover {
+  color: var(--white);
+  border-bottom: var(--white) 6px solid;
+  opacity: 0.8;
+}
+
+.navbar a:active {
+  opacity: 0.4;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+/* Search */
+
+#pretrazivanje {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10rem;
+}
+
+#pretrazivanje input {
+  padding: 10px 100px;
+  border-radius: 20px;
+  margin-top: 20px;
+  border: 5px solid var(--main-color);
+  text-align: center;
+}
+
+/* List */
+
+.content-search {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 3rem;
+  row-gap: 3rem;
+  list-style: none;
+  padding: 0;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  border: 5px solid var(--main-color);
+  min-height: 100px;
+  aspect-ratio: 2 / 1;
+  margin: 1rem;
+}
+
+.box img {
+  height: 235px;
+  width: 170px;
+  border-radius: 1rem;
+  margin: 0rem 1rem;
+}
+
+.box p {
+  font-size: 1.2rem;
+  margin-bottom: 4rem;
+}
+
+.box .price {
+  text-align: right;
+  margin: 1rem 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.box .more-btn {
+  background-color: var(--main-color);
+  color: var(--white);
+  border: none;
+  border-radius: 1rem;
+  font-size: 1rem;
+  padding: 1rem 1rem;
+  cursor: pointer;
+}
+
+.box .more-btn:hover {
+  opacity: 0.8;
+}
+
+.box .more-btn:active {
+  opacity: 0.4;
+}
+
+.box .round-btn {
+  background-color: var(--main-color);
+  color: var(--white);
+  border: none;
+  padding: 5px 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline;
+}
+
+.box .round-btn:hover {
+  opacity: 0.8;
+}
+
+.box .round-btn:active {
+  opacity: 0.4;
+}
+
+/* Media Queries */
+
+@media (max-width: 1600px) {
+  .content-search {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 0;
+  }
+
+  .box img {
+    height: 170px;
+  }
+
+  .box button {
+    margin-bottom: 1rem;
+  }
+
+  .box h2 {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 1280px) {
+  .content-search {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 0;
+  }
+
+  .box img {
+    height: 200px;
+    width: 140px;
+    border-radius: 1rem;
+    margin: 0rem 1rem;
+  }
+
+  .box h2 {
+    margin-top: 1rem;
+  }
+
+  .box button {
+    padding: 0.5rem 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 915px) {
+  .content-search {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 0;
+  }
+
+  .navbar {
+    flex-direction: column;
+    height: 110px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    height: 110px;
+    padding: 10px;
+  }
+
+  .navbar a {
+    padding-bottom: 1rem;
+  }
+
+  .content-search {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 0;
+  }
+
+  .box {
+    font-size: 0.6rem;
+  }
+
+  .box img {
+    height: 140px;
+    width: 100px;
+  }
+
+  .box p {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .box h2 {
+    margin-top: 0rem;
+  }
+
+  .box button {
+    padding: 0.5rem 1rem;
+  }
+
+  #pretrazivanje input {
+    padding: 10px 50px;
+  }
+}
