@@ -12,7 +12,7 @@ onAuthStateChanged(auth, (user) => {
   if (user) {
     loggedInElements.forEach(element => element.style.display = 'inline');
     loggedOutElements.forEach(element => element.style.display = 'none');
-    if(window.location.pathname === '/Zavrsni%20rad/profil.html') {
+    if(window.location.pathname === '/GameFinder/profil.html') {
       const messageToUser = `
         <div>Prijavljen si kao ${user?.email}</div>
       `;
@@ -29,7 +29,7 @@ onAuthStateChanged(auth, (user) => {
 
 
   } else {
-    if(window.location.pathname === '/Zavrsni%20rad/profil.html') {
+    if(window.location.pathname === '/GameFinder/profil.html') {
       accountDetails.innerHTML = '';
     }
     loggedInElements.forEach(element => element.style.display = 'none');
