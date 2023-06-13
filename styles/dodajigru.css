@@ -91,7 +91,6 @@ a {
   margin-top: 3rem;
 }
 
-
 .text-field input {
   width: 80%;
   padding: 0.8rem;
@@ -101,8 +100,12 @@ a {
   font-size: 1.2rem;
 }
 
-
 /* Media Queries */
+@media (max-width: 1280px) {
+  .center-box {
+    top: 75%;
+  }
+}
 
 @media (max-width: 915px) {
   .navbar {
@@ -117,7 +120,6 @@ a {
 }
 
 @media (max-width: 600px) {
-  
   .center-box {
     width: 350px;
     height: 700px;
@@ -128,7 +130,7 @@ a {
   .center-box h2 {
     margin-top: 0.5rem;
   }
-  
+
   .text-field input {
     width: 80%;
     padding: 0.3rem;
@@ -137,11 +139,18 @@ a {
   }
 }
 
+@media (max-height: 1080px) {
+  #login-div {
+    margin-top: 2rem;
+    height: 975px;
+  }
+}
+
 @media (max-height: 800px) {
   .navbar {
     position: absolute;
   }
-  
+
   .center-box {
     margin-top: 10rem;
   }
@@ -162,7 +171,7 @@ a {
   .center-box h2 {
     margin-top: 0.5rem;
   }
-  
+
   .text-field input {
     width: 80%;
     padding: 0.3rem;
@@ -170,9 +179,3 @@ a {
     font-size: 1rem;
   }
 }
-
-
-
-
-
-
