@@ -15,11 +15,11 @@ createForm.addEventListener("submit", async (e) => {
     Izdavač: createForm["Izdavač"].value,
     DatumIzlaska: createForm["DatumIzlaska"].value,
     Cijena: createForm["Cijena"].value,
-    Opis: createForm["Poveznica"].value,
-    Poveznica: createForm["Video"].value,
-    Video: createForm["Opis"].value,
-    Slika1: createForm["GlavnaSlika"].value,
+    Opis: createForm["Opis"].value,
+    Video: createForm["Video"].value,
+    Poveznica: createForm["Poveznica"].value,
     Slika: createForm["NaslovnaSlika"].value,
+    Slika1: createForm["GlavnaSlika"].value,
   };
 
   await addDoc(collection(db, "games"), gameData).then(() => {
